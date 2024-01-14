@@ -3,12 +3,12 @@
 <h1>Blazing Pizzas</h1>
 
 <ul>
-    @if(speacials != null)
+    @if(specials != null)
     {
         foreach (var special in specials)
         {
             <li style="background-image: url('@special.ImageUrl')">
-                
+
                 <div class="pizza-info">
                     <span class="title">@special.Name</span>
                     @special.Description
@@ -25,7 +25,7 @@
     
     protected override void OnInitialized()
     {
-        speacials.AddRange(new List<PizzaSpecial>
+        specials.AddRange(new List<PizzaSpecial>
             {
                 new PizzaSpecial { Name = "The Baconatorizor", BasePrice =  11.99M, Description = "It has EVERY kind of bacon", ImageUrl="img/pizzas/bacon.jpg"},
                 new PizzaSpecial { Name = "Buffalo chicken", BasePrice =  12.75M, Description = "Spicy chicken, hot sauce, and blue cheese, guaranteed to warm you up", ImageUrl="img/pizzas/meaty.jpg"},
